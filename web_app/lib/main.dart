@@ -42,15 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
         slivers: [
           SliverAppBar(
             title: Text(widget.title),
+            floating: true,
           ),
           SliverList(
             delegate: SliverChildListDelegate(
-              [
-                Container(
-                  height: 1000,
-                  color: Colors.teal,
-                ),
-              ],
+              containers(),
             ),
           ),
         ],
@@ -62,4 +58,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+List<Widget> containers() {
+  var _list = <Widget>[];
+  for (var i = 0; i < 10; i++) {
+    _list.add(Container(
+      height: 300,
+      color: i % 2 == 0 ? Colors.teal : Colors.purple,
+    ));
+  }
+  return _list;
 }

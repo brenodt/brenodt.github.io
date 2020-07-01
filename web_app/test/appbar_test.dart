@@ -20,9 +20,9 @@ void main() {
       expect(find.byType(SliverAppBar), findsNothing);
     });
 
-    testWidgets('''
-    Tests if SliverAppBar reappears after scrolling down and rescrolling up.
-    ''', (WidgetTester tester) async {
+    testWidgets(
+        'Tests if SliverAppBar reappears after scrolling down and rescrolling up.',
+        (WidgetTester tester) async {
       await tester.pumpWidget(MyApp());
 
       expect(find.byType(SliverAppBar), findsOneWidget);
