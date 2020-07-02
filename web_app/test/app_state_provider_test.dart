@@ -5,6 +5,11 @@ void main() {
   group('Tests app state control behavior', () {
     final AppStateProvider stateProvider = AppStateProvider();
 
+    test('Tests instancing of state provider', () {
+      final List<bool> _currState = stateProvider.appState;
+      expect(_currState, <bool>[true, false, false, false]);
+    });
+
     test('Tests getting current state of Provider', () {
       final AppState currentState = stateProvider.currentState;
       expect(currentState, AppState.home);
