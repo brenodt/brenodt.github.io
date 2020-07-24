@@ -4,36 +4,33 @@ import 'package:provider/provider.dart';
 import 'src/services/app_state_provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    // ignore: always_specify_types
-    return ChangeNotifierProvider(
-      create: (BuildContext context) => AppStateProvider(),
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primaryColor: const Color(0xFF262626),
-          visualDensity: VisualDensity.adaptivePlatformDensity,
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+        create: (context) => AppStateProvider(),
+        child: MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primaryColor: const Color(0xFF262626),
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          home: const HomePage(title: 'Flutter Demo Home Page'),
         ),
-        home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      ),
-    );
-  }
+      );
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key key, this.title}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

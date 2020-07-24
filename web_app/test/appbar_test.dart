@@ -9,7 +9,7 @@ void main() {
   group('Tests SliverAppBar behavior', () {
     testWidgets('Tests if SliverAppBar collapses after scrolling.',
         (WidgetTester tester) async {
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(App());
 
       expect(find.byType(SliverAppBar), findsOneWidget);
 
@@ -23,7 +23,7 @@ void main() {
     testWidgets(
         'Tests if SliverAppBar reappears after scrolling down and rescrolling up.',
         (WidgetTester tester) async {
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(App());
 
       expect(find.byType(SliverAppBar), findsOneWidget);
 
@@ -42,13 +42,13 @@ void main() {
 
   group('Tests action buttons of SliverAppBar', () {
     testWidgets('Tests if buttons are visible', (WidgetTester tester) async {
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(App());
       expect(find.byType(AppbarButton), findsWidgets);
     });
 
     testWidgets('Tests if home button is active by default',
         (WidgetTester tester) async {
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(App());
 
       final Finder homeButton = find.byType(AppbarButton).first;
 
@@ -57,7 +57,7 @@ void main() {
 
     testWidgets('Tests if click changes button state',
         (WidgetTester tester) async {
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(App());
 
       final Finder aboutButton = find.byType(AppbarButton).at(1);
 
