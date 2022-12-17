@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 defineProps<{
   msg: string;
@@ -11,7 +11,7 @@ defineProps<{
     <h1 class="green">
       Breno Teodoro
       <a class="no-hover" href="https://github.com/brenodt" target="_blank">
-        <font-awesome-icon class="icon-button" icon="fa-brands fa-github"/>
+        <font-awesome-icon class="icon-button" icon="fa-brands fa-github" />
       </a>
     </h1>
 

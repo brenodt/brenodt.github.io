@@ -22,7 +22,7 @@ defineProps<{
     </template>
 
     <template #heading>
-      <a :href="project.url" target="_blank" >
+      <a :href="project.url" target="_blank">
         {{ project.name }}
       </a>
       · {{ project.range }}

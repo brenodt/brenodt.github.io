@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import {RouterLink, RouterView} from "vue-router";
+import { RouterLink, RouterView } from "vue-router";
 import Header from "./components/PageHeader.vue";
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <Header msg="You did it!"/>
+      <Header msg="You did it!" />
 
       <nav>
         <RouterLink to="/">Projects</RouterLink>
