@@ -15,7 +15,7 @@ import Header from "./components/PageHeader.vue";
     </div>
   </header>
 
-  <RouterView/>
+  <RouterView />
 </template>
 
 <style scoped>

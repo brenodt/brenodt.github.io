@@ -1,36 +1,33 @@
 <script setup lang="ts">
 import ProjectItem from "./ProjectItem.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+type Project = {
+  name: string;
+  range: string;
+  description: string;
+  url: string;
+  icon: string;
+};
+
+defineProps<{
+  projects: Project[];
+}>();
 </script>
 
 <template>
-  <ProjectItem>
+  <ProjectItem v-for="project in projects" :key="project.name">
     <template #icon>
-      <font-awesome-icon icon="fa-solid fa-comments" />
+      <font-awesome-icon :icon="project.icon" />
     </template>
-    <template #heading>Qaul</template>
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida
-    sollicitudin massa sit amet convallis. Nullam eget pulvinar nibh.
-  </ProjectItem>
-
-  <ProjectItem>
-    <template #icon>
-      <font-awesome-icon icon="fa-solid fa-utensils" />
+    <template #heading>
+      <a :href="project.url" target="_blank" >
+        {{ project.name }}
+      </a>
+      · {{ project.range }}
     </template>
-    <template #heading>GoCoCo</template>
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida
-    sollicitudin massa sit amet convallis. Nullam eget pulvinar nibh.
-  </ProjectItem>
-
-  <ProjectItem>
-    <template #icon>
-      <font-awesome-icon icon="fa-solid fa-headphones-simple" />
-    </template>
-    <template #heading>Mindbliss</template>
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida
-    sollicitudin massa sit amet convallis. Nullam eget pulvinar nibh.
+    {{ project.description }}
   </ProjectItem>
 </template>
