@@ -7,6 +7,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://brenodt.dev/articles',
+  site: 'https://brenodt.dev',
   integrations: [mdx(), sitemap(), vue(), image(), tailwind()]
 });

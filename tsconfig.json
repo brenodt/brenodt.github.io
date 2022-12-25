@@ -1,16 +1,6 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
-  ]
+    "jsx": "preserve"
+  }
 }
