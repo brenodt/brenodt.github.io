@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggleButton.tsx';
 import { SITE_TITLE } from '../config';
 
 import {IoLogoGithub} from 'react-icons/io5';
@@ -22,6 +23,7 @@ import {IoLogoGithub} from 'react-icons/io5';
         >
       </div>
       <div class="flex-1"></div>
+      <ThemeToggle client:visible />
     </nav>
   </div>
 </header>
