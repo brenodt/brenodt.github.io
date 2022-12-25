@@ -1,9 +1,10 @@
 ---
+import {HOMEPAGE_URL} from '../config.ts';
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Breno Teodoro. All rights reserved.
+<footer class="text-zinc-500 p-4 text-center">
+	&copy; {today.getFullYear()} <a href={HOMEPAGE_URL}>Breno Teodoro</a>. All rights reserved.
 </footer>
 <style>
 	footer {
