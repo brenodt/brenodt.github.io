@@ -1,12 +1,12 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import vue from '@astrojs/vue';
 import image from '@astrojs/image';
 import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://brenodt.dev',
-  integrations: [mdx(), sitemap(), vue(), image(), tailwind()]
+  integrations: [mdx(), sitemap(), image(), tailwind(), react()]
 });
