@@ -1,30 +1,38 @@
 ---
-import Body from '../components/Body.astro';
-import BaseHead from '../components/BaseHead.astro';
-import Content from '../components/Content.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Masthead from '../components/Masthead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import Body from '../components/Body.astro'
+import BaseHead from '../components/BaseHead.astro'
+import Content from '../components/Content.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Masthead from '../components/Masthead.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<Body>
-		<Header title={SITE_TITLE} />
-		<main class="pt-[56px]">
-            <Masthead />
-			<Content>
-			    <p class="mb-8 indent-4">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-<br/><br/>
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
-</p>
-			</Content>
-		</main>
-		<Footer />
-	</Body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[56px]">
+      <Masthead />
+      <Content>
+        <p class="mb-8">
+          Somewhat of a philomath, I'm very analytical, and find pleasure in
+          reasoning about the most varying subjects - from understanding the
+          formation of the universe to the origin of species.
+          <br /><br />
+          From a young age I realized that I loved solving puzzles, and in programming
+          I found an environment that is filled with them. I got addicted to the
+          process of finding solutions and seeing my work help people on their most
+          mundane tasks.
+          <br /><br />
+          I enjoy taking challenges, and leveraging from other people's cultures
+          and experiences.
+        </p>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
 </html>
