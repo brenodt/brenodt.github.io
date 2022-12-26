@@ -1,9 +1,9 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import ThemeToggle from './ThemeToggleButton.tsx';
-import { SITE_TITLE } from '../config';
+import HeaderLink from './HeaderLink.astro'
+import ThemeToggle from './ThemeToggleButton.tsx'
+import { SITE_TITLE } from '../config'
 
-import {IoLogoGithub} from 'react-icons/io5';
+import { IoLogoGithub } from 'react-icons/io5/index.js'
 ---
 
 <header class="fixed w-full p-2 z-20 backdrop-blur-md">
@@ -11,14 +11,13 @@ import {IoLogoGithub} from 'react-icons/io5';
     <nav class="flex items-center gap-3 text-base">
       <a href="/" class="group">
         <h2 class="font-semibold tracking-tighter p-2 font-mplus text-lg">
-            {SITE_TITLE}
+          {SITE_TITLE}
         </h2>
       </a>
       <div class="items-center gap-6 hidden md:flex">
         <HeaderLink href="/articles">Articles</HeaderLink>
-        <HeaderLink
-          href="https://github.com/brenodt"
-          target="_blank"><IoLogoGithub /> Github</HeaderLink
+        <HeaderLink href="https://github.com/brenodt" target="_blank"
+          ><IoLogoGithub /> Github</HeaderLink
         >
       </div>
       <div class="flex-1"></div>
