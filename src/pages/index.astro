@@ -1,0 +1,38 @@
+---
+import Body from '../components/Body.astro'
+import BaseHead from '../components/BaseHead.astro'
+import Content from '../components/Content.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Masthead from '../components/Masthead.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[56px]">
+      <Masthead />
+      <Content>
+        <p class="mb-8">
+          Somewhat of a philomath, I'm very analytical, and find pleasure in
+          reasoning about the most varying subjects - from understanding the
+          formation of the universe to the origin of species.
+          <br /><br />
+          From a young age I realized that I loved solving puzzles, and in programming
+          I found an environment that is filled with them. I got addicted to the
+          process of finding solutions and seeing my work help people on their most
+          mundane tasks.
+          <br /><br />
+          I enjoy taking challenges, and leveraging from other people's cultures
+          and experiences.
+        </p>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>
