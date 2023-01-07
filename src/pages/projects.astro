@@ -1,0 +1,46 @@
+---
+import Body from '../components/Body.astro'
+import BaseHead from '../components/BaseHead.astro'
+import Content from '../components/Content.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Masthead from '../components/Masthead.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+import { FiCheckSquare } from 'react-icons/fi/index.js'
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const projects = (await Astro.glob('./projects/*.{md,mdx}')).sort(
+  (a, b) =>
+    new Date(b.frontmatter.createdAt).valueOf() -
+    new Date(a.frontmatter.createdAt).valueOf()
+)
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+      <Header title={SITE_TITLE} />
+      <main class="pt-[56px]">
+        <section class="m-8">
+          {
+            projects.map(post => (
+              <div class="text-start mb-4 flex items-center">
+                <FiCheckSquare />
+                <a class="ml-4" href={post.url}>
+                  <div class="mt-3 text-xl font-bold">
+                    {post.frontmatter.title}
+                  </div>
+                  {post.frontmatter.description && (
+                    <div class="opacity-70">{post.frontmatter.description}</div>
+                  )}
+                </a>
+              </div>
+            ))
+          }
+        </section>
+      </main>
+    </Body>
+</html>

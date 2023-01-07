@@ -1,0 +1,32 @@
+---
+public: true
+layout: ../../layouts/ProjectPost.astro
+
+title: Week 0 - Tic-Tac-Toe
+description: First game from the year-long challenge
+
+createdAt: 1673111491
+updatedAt: 1673111491
+---
+import { Game } from './0--tic-tac-toe.jsx'
+
+<Game />
+
+Far from the ideal week, but I ended up finishing the game.
+Some key technical takeaways were:
+
+##### 1 - Using a singleton [Audio Manager](https://kidscancode.org/godot_recipes/3.x/audio/audio_manager/)
+##### 2 - [CanvasLayer](https://docs.godotengine.org/en/3.0/classes/class_canvaslayer.html) can help in covering the entire screen
+##### 3 - Detecting collision on objects when mouse clicks
+Kind of a hacky implementation, but I made so that each cell has its own CollisionShape, so that it's easier
+to determine when a click on a valid cell happens.
+```gdscript
+func _input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		var mousePos = get_global_mouse_position()
+		var space = get_world_2d().direct_space_state
+		var collision_objects = space.intersect_point(mousePos, 1)
+    if collision_objects:
+			var cell = collision_objects[0].collider.name
+			print("detected press on cell: " + cell)
+```
