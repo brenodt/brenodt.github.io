@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build Vue App
+    name: Build Astro App
     runs-on: ubuntu-latest
 
     steps:

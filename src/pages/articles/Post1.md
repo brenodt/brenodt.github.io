@@ -7,7 +7,6 @@ description: How to properly configure snapcraft to compile your Flutter applica
 
 createdAt: 1673091276
 updatedAt: 1673091276
-heroImage: /snapcraft.png
 ---
 
 Recently, I faced a problem when attempting to release a project I work on to the Snap store[^1].
