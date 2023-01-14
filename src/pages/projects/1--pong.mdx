@@ -1,0 +1,51 @@
+---
+public: true
+layout: ../../layouts/ProjectPost.astro
+
+title: Week 1 - Pong
+description: Second game from the year-long challenge
+
+createdAt: 1673718194
+updatedAt: 1673718194
+---
+import { Game } from './1--pong.jsx'
+
+<Game />
+
+I did not have the time I wanted to dedicate myself into this side-project, but thankfully I got to an MVP.
+
+In terms of organization, one thing I did that was super helpful was to completely organize assets and what not
+*before* starting to code. By the end of Sunday, I had a scene with the two pads, a center separator, the
+scores and a basic menu (much cleaner than the one from tic-tac-toe).
+This streamlined a lot of the coding/development later on, which happened in a total of 5 hours, a bit on Monday,
+the remainder on Saturday.
+
+Some key technical takeaways were:
+
+##### 1 - Using the [bounce](https://docs.godotengine.org/en/3.0/tutorials/physics/using_kinematic_body_2d.html) method to have the ball behave as expected - clean and intuitive
+##### 2 - First usage of custom Signals
+##### 3 - `queue_free()` to destroy `self`
+```gdscript
+# Ball physics update
+func _physics_process(delta):
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		if collision.collider.name == LFT_WALL.name:
+			emit_signal("player2_scores")
+			queue_free()
+		if collision.collider.name == RGT_WALL.name:
+			emit_signal("player1_scores")
+			queue_free()
+
+		velocity = velocity.bounce(collision.normal)
+		velocity.x *= HIT_BUMP_FACTOR
+		velocity.y *= HIT_BUMP_FACTOR
+```
+##### 4 - Name of the node that owns the script
+```gdscript
+# I use the same piece of code to control both pads. The only difference is the keys that move up/down.
+# To differentiate, I just check what is the name of the node that owns the given script
+var nodeName = $".".name
+var UP_KEY = KEY_W if nodeName == "Player1" else KEY_I
+var DN_KEY = KEY_S if nodeName == "Player1" else KEY_K
+```
