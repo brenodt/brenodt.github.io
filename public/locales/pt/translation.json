@@ -1,0 +1,65 @@
+{
+  "common": {
+    "hire": "Me contrate"
+  },
+  "site": {
+    "masthead": {
+      "word1": "Artesão",
+      "word2": "Digital"
+    },
+    "footer": {
+      "rights": "Todos os direitos reservados"
+    },
+    "nav": {
+      "articles": "Artigos"
+    }
+  },
+  "landing": {
+    "p1": "Um tanto quanto filomático, sou muito analítico e gosto de raciocinar sobre os mais variados assuntos - desde compreender a formação do universo até a origem das espécies.",
+    "p2": "Desde jovem, percebi que adorava resolver quebra-cabeças, e na programação encontrei um ambiente repleto deles. Fiquei viciado no processo de encontrar soluções e ver meu trabalho ajudar as pessoas em suas tarefas mais mundanas.",
+    "p3": "Gosto de enfrentar desafios e aproveitar as culturas e experiências de outras pessoas."
+  },
+  "contact": {
+    "p1": "Com minha experiência e conhecimento analítico, sou capaz de fornecer soluções inovadoras e eficientes para os seus desafios de desenvolvimento de software.",
+    "p2": "Tenho habilidades em várias linguagens de programação e estou sempre  me atualizando com novas tecnologias. Meu objetivo é ajudar sua empresa a otimizar seus processos de desenvolvimento e alcançarem resultados excepcionais por meio de soluções personalizadas e de qualidade.",
+    "p3": "Acha que posso te ajudar? Responda o questionário abaixo!",
+    "faq": {
+      "rating": {
+        "title": "Preços e Faturamento",
+        "description": {
+          "p1": "O custo da minha consultoria começa em R$ 200,00 por hora, faturado em incrementos de 30 minutos, com um custo mínimo de 1 hora para novos clientes.",
+          "p2": "As tarifas variam de acordo com a complexidade do projeto.",
+          "p3": "Estimativas podem ser fornecidas antecipadamente, se um escopo de trabalho claramente definido for fornecido.",
+          "p4": "Um agendamento de 1 hora pode ser necessário para discutir projetos maiores/mais complexos.",
+          "p5": "Qualquer trabalho realizado fora do horário comercial normal ou em feriados será faturado a uma taxa mais alta.",
+          "p6": "Para novos clientes, as horas de consultoria devem ser pagas antecipadamente."
+        }
+      },
+      "availability": {
+        "title": "Disponibilidade",
+        "description": "Meu horário normal de atendimento é de segunda a sexta-feira, das 9h00 às 18h00 GMT-3."
+      },
+      "tools": {
+        "title": "Ferramentas de Reunião",
+        "description": {
+          "p1": "O Google Meet é usado para comunicação durante as reuniões, embora a webcam seja opcional.",
+          "p2": "Prefiro não usar outro aplicativo de reunião."
+        }
+      },
+      "additional_info": {
+        "title": "Eu posso te enviar documentação ou capturas de tela antes da nossa reunião?",
+        "description": {
+          "p1": "Após eu fornecer um link de agendamento, você pode me enviar qualquer informação que considere útil.",
+          "p2": "Todas as informações enviadas antes de uma reunião serão revisadas apenas a meu critério. Não sou obrigado a revisar qualquer documentação antes de uma reunião, pois isso é considerado tempo faturável."
+        }
+      },
+      "warranty": {
+        "title": "Informações de Garantia",
+        "description": {
+          "p1": "Devido à natureza do trabalho, não há garantia para trabalho por hora.",
+          "p2": "Cada hora trabalhada é faturada independentemente do resultado do trabalho."
+        }
+      }
+    }
+  }
+}

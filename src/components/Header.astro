@@ -2,27 +2,65 @@
 import HeaderLink from './HeaderLink.astro'
 import ThemeToggle from './ThemeToggleButton.tsx'
 import { SITE_TITLE } from '../config'
-
 import { IoLogoGithub } from 'react-icons/io5/index.js'
+import { t } from 'i18next'
+import { localizePath } from 'astro-i18next'
+import { LanguageSelector } from 'astro-i18next/components'
 ---
 
-<header class="fixed w-full p-2 z-20 backdrop-blur-md">
-  <div class="mx-auto max-w-3xl">
-    <nav class="flex items-center gap-3 text-base">
-      <a href="/" class="group">
-        <h2 class="font-semibold tracking-tighter p-2 font-mplus text-lg">
+<header class='fixed w-full p-2 z-20 backdrop-blur-md'>
+  <nav class=''>
+    <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5'>
+      <a href={localizePath('/')} class='group'>
+        <h2 class='font-semibold tracking-tighter p-2 font-mplus text-lg mr-4'>
           {SITE_TITLE}
         </h2>
       </a>
-      <div class="items-center gap-6 hidden md:flex">
-        <HeaderLink href="/articles">Articles</HeaderLink>
-        <HeaderLink href="/projects">Projects</HeaderLink>
-        <HeaderLink href="https://github.com/brenodt" target="_blank"
-          ><IoLogoGithub /> Github</HeaderLink
-        >
-      </div>
-      <div class="flex-1"></div>
+
+      <div class='flex-1'></div>
+
+
+      <LanguageSelector
+        class='text-white ml-3 bg-blue-400 hover:bg-blue-500 focus:outline-none font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center mr-4'
+      />
       <ThemeToggle client:visible />
-    </nav>
-  </div>
+      <button data-collapse-toggle='navbar-dropdown' type='button'
+              class='inline-flex items-center p-2 ml-3 mr-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+              aria-controls='navbar-dropdown' aria-expanded='false'>
+        <span class='sr-only'>Open main menu</span>
+        <svg class='w-6 h-6' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'
+             xmlns='http://www.w3.org/2000/svg'>
+          <path fill-rule='evenodd'
+                d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
+                clip-rule='evenodd'></path>
+        </svg>
+      </button>
+
+      <div class='hidden w-full md:block md:w-auto' id='navbar-dropdown'>
+        <ul
+          class='flex flex-col font-medium p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm sm:bg-sky-200 sm:dark:bg-zinc-600 md:bg-transparent md:dark:bg-transparent'>
+
+          <li>
+            <HeaderLink
+              class='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              href={localizePath('/articles')}>{t('site.nav.articles')}</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink
+              class='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              href={localizePath('/contact')}>{t('common.hire')}</HeaderLink>
+          </li>
+          <li>
+            <HeaderLink href='https://github.com/brenodt' target='_blank'
+                        class='flex items-center py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+            >
+              <IoLogoGithub />
+              Github
+            </HeaderLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src='https://unpkg.com/flowbite@1.5.1/dist/flowbite.js'></script>
 </header>

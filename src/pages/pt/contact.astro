@@ -1,0 +1,95 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../config";
+import BaseHead from "../../components/BaseHead.astro";
+import Body from "../../components/Body.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Content from "../../components/Content.astro";
+import Masthead from "../../components/Masthead.astro";
+
+changeLanguage("pt");
+---
+<!DOCTYPE html>
+<html lang={i18next.language}>
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <style>* {
+      margin: 0;
+      padding: 0;
+  }
+
+  html, body, iframe {
+      border-radius: 0 !important;
+  }</style>
+</head>
+<Body>
+<Header title={SITE_TITLE} />
+<main class='pt-[56px]'>
+  <Content>
+    <p class='mb-8 mt-8'>
+      {t('contact.p1')}
+      <br />
+      <br />
+      {t('contact.p2')}
+      <br />
+      <br />
+      {t('contact.p3')}
+    </p>
+    <div class='flex flex-col items-center'>
+      <button data-tf-popup={i18next.language === 'en' ? 'BXdwhZoy' : 'THSeTqZp'} type='button'
+              class='w-80 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2'>
+        {t("common.hire")}
+      </button>
+    </div>
+
+    <h2 class='text-4xl mb-4'>FAQ</h2>
+
+    <h3 class='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
+      {t('contact.faq.rating.title')}
+    </h3>
+    <ul class='space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+      <li>{t('contact.faq.rating.description.p1')}</li>
+      <li>{t('contact.faq.rating.description.p2')}</li>
+      <li>{t('contact.faq.rating.description.p3')}</li>
+      <li>{t('contact.faq.rating.description.p4')}</li>
+      <li>{t('contact.faq.rating.description.p5')}</li>
+      <li>{t('contact.faq.rating.description.p6')}</li>
+    </ul>
+
+    <h3 class='mt-2 mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+      {t('contact.faq.availability.title')}
+    </h3>
+    <ul class='space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+      <li>{t('contact.faq.availability.description')}</li>
+    </ul>
+
+    <h3 class='mt-2 mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+      {t('contact.faq.tools.title')}
+    </h3>
+    <ul class='space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+      <li>{t('contact.faq.tools.description.p1')}</li>
+      <li>{t('contact.faq.tools.description.p2')}</li>
+    </ul>
+
+    <h3 class='mt-2 mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+      {t('contact.faq.additional_info.title')}
+    </h3>
+    <ul class='space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+      <li>{t('contact.faq.additional_info.description.p1')}</li>
+      <li>{t('contact.faq.additional_info.description.p2')}</li>
+    </ul>
+
+    <h3 class='mt-2 mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+      {t('contact.faq.warranty.title')}
+    </h3>
+    <ul class='space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+      <li>{t('contact.faq.warranty.description.p1')}</li>
+      <li>{t('contact.faq.warranty.description.p2')}</li>
+    </ul>
+  </Content>
+  <script is:inline src='//embed.typeform.com/next/embed.js'></script>
+</main>
+<Footer />
+</Body>
+</html>

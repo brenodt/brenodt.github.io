@@ -1,0 +1,65 @@
+{
+  "common": {
+    "hire": "Hire me"
+  },
+  "site": {
+    "masthead": {
+      "word1": "Digital",
+      "word2": "crafts-person"
+    },
+    "footer": {
+      "rights": "All rights reserved"
+    },
+    "nav": {
+      "articles": "Articles"
+    }
+  },
+  "landing": {
+    "p1": "Somewhat of a philomath, I'm very analytical, and find pleasure in reasoning about the most varying subjects - from understanding the formation of the universe to the origin of species.",
+    "p2": "From a young age I realized that I loved solving puzzles, and in programming I found an environment that is filled with them. I got addicted to the process of finding solutions and seeing my work help people on their most mundane tasks.",
+    "p3": "I enjoy taking challenges, and leveraging from other people's cultures and experiences."
+  },
+  "contact": {
+    "p1": "With my expertise and analytical knowledge, I can provide innovative and efficient solutions for your project needs.",
+    "p2": "I have skills in various programming languages and I am constantly updating myself with new technologies. My goal is to help your company achieve results through customized and high-quality solutions.",
+    "p3": "Do you think I can help you? Please respond to the questionnaire below!",
+    "faq": {
+      "rating": {
+        "title": "Rate & Billing",
+        "description": {
+          "p1": "My consulting cost starts at $40.00 USD per hour, billed in 30 minute increments, with a 1 hour minimum purchase required for new clients.",
+          "p2": "Rates vary by project complexity.",
+          "p3": "Estimates can be given up front, if a clearly defined scope of work is provided.",
+          "p4": "A 1 hour appointment may be required to discuss larger/more complex projects.",
+          "p5": "Any work performed outside of normal business hours or on holidays will be billed at a higher rate.",
+          "p6": "For new clients, consulting hours must be paid in advance."
+        }
+      },
+      "availability": {
+        "title": "Availability",
+        "description": "My normal service hours are Monday through Friday 9:00am until 6:00pm GMT-3."
+      },
+      "tools": {
+        "title": "Meeting Tools",
+        "description": {
+          "p1": "Google Meet is used to communicate during meetings, although webcams are optional.",
+          "p2": "I prefer not to use other meeting client."
+        }
+      },
+      "additional_info": {
+        "title": "Can I send you documentation or screenshots before our appointment?",
+        "description": {
+          "p1": "After I provide you with a booking link, you may send me whatever information you deem useful.",
+          "p2": "Any and all information sent prior to an appointment will only be reviewed at my own discretion. I'm not required to review any documentation prior to a meeting as that is considered billable time."
+        }
+      },
+      "warranty": {
+        "title": "Warranty Information",
+        "description": {
+          "p1": "Due to the nature of the work, there is no warranty on hourly work.",
+          "p2": "Each worked hour is billable regardless of the outcome of said work."
+        }
+      }
+    }
+  }
+}
